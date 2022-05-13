@@ -1,0 +1,219 @@
+{
+	"info": {
+		"_postman_id": "2ac12049-a708-43b1-a6ac-dc9354c314e1",
+		"name": "HW 1",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "createcompany",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\"company_name\": \"mamama\",\r\n\"company_type\": \"ООО\",\r\n\"inn\": \"123456789899\",\r\n\"ogrn\": \"1000055000099\",\r\n\"kpp\": \"000008899\",\r\n\"number\": \"+375442589645\",\r\n\"email_owner\": \"goroshkoa2@mail.com\",\r\n\"company_users \": [22,31,23]\r\n}"
+				},
+				"url": {
+					"raw": "http://users.bugred.ru/tasks/rest/createcompany",
+					"protocol": "http",
+					"host": [
+						"users",
+						"bugred",
+						"ru"
+					],
+					"path": [
+						"tasks",
+						"rest",
+						"createcompany"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "createuserwithtasks",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n \"email\": \"test@mail.com\",\r\n \"name\": \"Test1\",\r\n \"tasks\": [{\r\n   \"title\": \"task1\",\r\n   \"description\": \"task1\"\r\n  },\r\n  {\r\n   \"title\": \"task2\",\r\n   \"description\": \"task2\"\r\n  }\r\n ],\r\n \"companies\": [14, 31]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://users.bugred.ru/tasks/rest/createuserwithtasks",
+					"protocol": "http",
+					"host": [
+						"users",
+						"bugred",
+						"ru"
+					],
+					"path": [
+						"tasks",
+						"rest",
+						"createuserwithtasks"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "createtask",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "task_title",
+							"value": "task41",
+							"type": "text"
+						},
+						{
+							"key": "task_description",
+							"value": "drink1",
+							"type": "text"
+						},
+						{
+							"key": "email_owner",
+							"value": "zakharava@mail.ru",
+							"type": "text"
+						},
+						{
+							"key": "email_assign",
+							"value": "sveta21",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://users.bugred.ru/tasks/rest/createtask",
+					"protocol": "http",
+					"host": [
+						"users",
+						"bugred",
+						"ru"
+					],
+					"path": [
+						"tasks",
+						"rest",
+						"createtask"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getuserfull",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "email",
+							"value": "goroshkoa2@mail.com",
+							"type": "text"
+						},
+						{
+							"key": "name",
+							"value": "sveta2",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://users.bugred.ru/tasks/rest/getuserfull",
+					"protocol": "http",
+					"host": [
+						"users",
+						"bugred",
+						"ru"
+					],
+					"path": [
+						"tasks",
+						"rest",
+						"getuserfull"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getuser",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "email",
+							"value": "goroshkoa2@mail.com",
+							"type": "text"
+						},
+						{
+							"key": "name",
+							"value": "sveta2",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://users.bugred.ru/tasks/rest/getuser",
+					"protocol": "http",
+					"host": [
+						"users",
+						"bugred",
+						"ru"
+					],
+					"path": [
+						"tasks",
+						"rest",
+						"getuser"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getcompany",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "id_company",
+							"value": "35",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://users.bugred.ru/tasks/rest/getcompany",
+					"protocol": "http",
+					"host": [
+						"users",
+						"bugred",
+						"ru"
+					],
+					"path": [
+						"tasks",
+						"rest",
+						"getcompany"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
